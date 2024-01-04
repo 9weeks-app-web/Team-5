@@ -66,7 +66,7 @@ class _StudyPageState extends State<StudyPage> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
-                        '스터디 모집',
+                        '스터디 모집a',
                         style: TextStyle(
                           color: AppColor.Neutral100,
                           fontSize: 16,
