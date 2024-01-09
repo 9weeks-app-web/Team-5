@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:get/get.dart';
+import '../screen/Onboarding4.dart';
+import 'package:get/get.dart';
 
 class Onboarding_3 extends StatefulWidget {
   const Onboarding_3({super.key});
@@ -256,7 +257,7 @@ class ONboarding_3 extends State<Onboarding_3> {
                         borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () {
-                    // Get.to(ONboarding_4());
+                    Get.to(Onboarding4());
                   },
                   child: Center(
                     child: Text(

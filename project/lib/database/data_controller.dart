@@ -1,7 +1,4 @@
-import 'dart:io';
 import 'dart:math';
-import 'dart:convert';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -127,10 +124,10 @@ class Data_Control {
     }
   }
 
-  // 게시글 가져오기 (게시판)
-  Future<Map<String, dynamic>> get_post() async {
+  // 게시글 가져오기 (컬렉션 이름 널어서)/
+  Future<Map<String, dynamic>> get_post(String collection) async {
     try {
-      QuerySnapshot querySnapshot = await store.collection('Notice').get();
+      QuerySnapshot querySnapshot = await store.collection(collection).get();
       Map<String, dynamic> result = {};
       for (QueryDocumentSnapshot doc in querySnapshot.docs) {
         result[doc.id] = doc.data();
@@ -142,15 +139,32 @@ class Data_Control {
     }
   }
 
-  // 문서 증식용 더미 코드
+  // 문서 증식용 더미 코드 게시판
   Future<void> increase_date() async {
     try {
       DocumentSnapshot sourceDoc =
-          await store.collection('Notice').doc('KB6f6T4gc4eU8vrxDmc6').get();
+          await store.collection('Notice').doc('doc_1704567608711_60766').get();
       Map<String, dynamic>? data = sourceDoc.data() as Map<String, dynamic>?;
       if (data != null) {
         String docname = generateRandomName();
         await store.collection('Notice').doc(docname).set(data);
+      } else {
+        print('오류??');
+      }
+    } catch (e) {
+      print('오류 : $e');
+    }
+  }
+
+// 문서 증식용 더미 코드 숏펙
+  Future<void> increase_short() async {
+    try {
+      DocumentSnapshot sourceDoc =
+          await store.collection('Shortpec').doc('aaDFiNB0jMBJ7p4zQ7Wq').get();
+      Map<String, dynamic>? data = sourceDoc.data() as Map<String, dynamic>?;
+      if (data != null) {
+        String docname = generateRandomName();
+        await store.collection('Shortpec').doc(docname).set(data);
       } else {
         print('오류??');
       }

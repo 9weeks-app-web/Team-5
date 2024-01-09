@@ -1,8 +1,7 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:team5/utill/color.dart';
-
+import '../screen/onboarding_3.dart';
+import '../utill/color.dart';
 
 class SecondOnboringPage extends StatefulWidget {
   const SecondOnboringPage({super.key});
@@ -159,14 +158,29 @@ class _MyWidgetState extends State<SecondOnboringPage> {
               onPressed: () {},
               icon: Icon(Icons.navigate_before),
             ),
-            title: Column(children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [Container(
-                  
-                )],
-              )
-            ]),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 296,
+                      height: 8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: AppColor.Neutral10),
+                    ),
+                    Container(
+                      width: 148,
+                      height: 8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: AppColor.Primary100),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
           body: SingleChildScrollView(
             child: Center(
@@ -175,6 +189,30 @@ class _MyWidgetState extends State<SecondOnboringPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Text.rich(
+                      TextSpan(
+                        text: '2 ',
+                        style: TextStyle(
+                          color: Color(0xFF020202),
+                          fontSize: 12,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w400,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '/4 ',
+                              style: TextStyle(
+                                color: Color(0xFF999999),
+                                fontSize: 12,
+                                fontFamily: 'Pretendard',
+                                fontWeight: FontWeight.w400,
+                              )),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text(
                       '현재의 상태를 알려주세요',
                       style: TextStyle(
@@ -509,11 +547,11 @@ class _MyWidgetState extends State<SecondOnboringPage> {
                             elevation: 0,
                             backgroundColor: AppColor.Primary100),
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => FindokLoginPage()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Onboarding_3()),
+                          );
                         },
                         child: Text(
                           '다음',

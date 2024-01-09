@@ -37,7 +37,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_BIg (1).png',
+                            'assets/pr/peeps-avatar-alpha (10).png',
                           ),
                         )),
                     Positioned(
@@ -47,7 +47,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_BIg (3).png',
+                            'assets/pr/peeps-avatar-alpha (6).png',
                           ),
                         )),
                     Positioned(
@@ -65,8 +65,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_BIg (4).png'),
+                          child: Image.asset('assets/pr/디자인3_프로필.png'),
                         )),
                     Positioned(
                         right: -1,
@@ -74,8 +73,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_BIg (2).png'),
+                          child: Image.asset('assets/pr/디자인1_프로필.png'),
                         )),
                     Positioned(
                         left: 30,
@@ -144,7 +142,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (16).png',
+                            'assets/pr/untitled portrait-3.png',
                           ),
                         )),
                     Positioned(
@@ -154,7 +152,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (23).png',
+                            'assets/pr/peeps-avatar-alpha (1).png',
                           ),
                         )),
                     Positioned(
@@ -172,8 +170,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (18).png'),
+                          child: Image.asset('assets/pr/Mask group-1.png'),
                         )),
                     Positioned(
                         right: -1,
@@ -181,8 +178,8 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (15).png'),
+                          child:
+                              Image.asset('assets/pr/untitled portrait-4.png'),
                         )),
                     Positioned(
                         left: 30,
@@ -251,7 +248,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (21).png',
+                            'assets/pr/untitled portrait-2.png',
                           ),
                         )),
                     Positioned(
@@ -261,7 +258,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (24).png',
+                            'assets/pr/peeps-avatar-alpha 2.png',
                           ),
                         )),
                     Positioned(
@@ -270,8 +267,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (22).png'),
+                          child: Image.asset('assets/pr/Mask group-3.png'),
                         )),
                     Positioned(
                         right: 10,
@@ -279,8 +275,8 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (25).png'),
+                          child:
+                              Image.asset('assets/pr/untitled portrait-1.png'),
                         )),
                     Positioned(
                         right: -1,
@@ -288,8 +284,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (1).png'),
+                          child: Image.asset('assets/pr/Mask group-2.png'),
                         )),
                     Positioned(
                         left: 30,
@@ -358,7 +353,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (5).png',
+                            'assets/pr/Mask group.png',
                           ),
                         )),
                     Positioned(
@@ -368,7 +363,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (4).png',
+                            'assets/pr/peeps-avatar-alpha (7).png',
                           ),
                         )),
                     Positioned(
@@ -377,8 +372,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (7).png'),
+                          child: Image.asset('assets/pr/Group 1437255684.png'),
                         )),
                     Positioned(
                         right: 10,
@@ -386,8 +380,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (8).png'),
+                          child: Image.asset('assets/pr/Group 1437256016.png'),
                         )),
                     Positioned(
                         right: -1,
@@ -395,8 +388,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (6).png'),
+                          child: Image.asset('assets/pr/untitled portrait.png'),
                         )),
                     Positioned(
                         left: 30,
@@ -465,7 +457,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (10).png',
+                            'assets/pr/기타1_프로필.png',
                           ),
                         )),
                     Positioned(
@@ -475,7 +467,7 @@ class StudyWidget extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            'assets/communitystudy/Profile_Small (9).png',
+                            'assets/pr/peeps-avatar-alpha (2).png',
                           ),
                         )),
                     Positioned(
@@ -484,8 +476,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (12).png'),
+                          child: Image.asset('assets/pr/Group 1437255685.png'),
                         )),
                     Positioned(
                         right: 10,
@@ -493,8 +484,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (13).png'),
+                          child: Image.asset('assets/pr/Group 1437255683.png'),
                         )),
                     Positioned(
                         right: -1,
@@ -502,8 +492,7 @@ class StudyWidget extends StatelessWidget {
                         child: Container(
                           width: 40,
                           height: 40,
-                          child: Image.asset(
-                              'assets/communitystudy/Profile_Small (11).png'),
+                          child: Image.asset('assets/pr/Ellipse 6978.png'),
                         )),
                     Positioned(
                         left: 30,

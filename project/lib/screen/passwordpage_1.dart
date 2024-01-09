@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -19,6 +21,7 @@ class PasswordPage_1 extends State<Passwordpage_1> {
   TextEditingController input_name = TextEditingController();
   TextEditingController input_email = TextEditingController();
   TextEditingController input_phone = TextEditingController();
+  bool certification = false;
 
   bool next_state_1 = false;
   bool next_state_2 = false;
@@ -26,9 +29,16 @@ class PasswordPage_1 extends State<Passwordpage_1> {
   bool next_state_4 = false;
   bool next_result = false;
 
+  int timer_set = 180;
+  bool timer_state = false;
+  late ValueNotifier<int> timerNotifier;
+
+  String request_text = '인증요청';
+
   @override
   void initState() {
     super.initState();
+    timerNotifier = ValueNotifier<int>(timer_set);
     for (int i = 1; i <= 4; i++) {
       button_back_colors['button_${i}'] = Color(0xFFF8F8F8);
       button_side_colors['button_${i}'] = Color(0xFFF8F8F8);
@@ -47,6 +57,21 @@ class PasswordPage_1 extends State<Passwordpage_1> {
       }
       button_back_colors['button_${button_num}'] = Color(0xFFF5F8FF);
       button_side_colors['button_${button_num}'] = Color(0xFF0059FF);
+    });
+  }
+
+  void Play_timer() {
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      if (timer_set > 0 && timer_state) {
+        timer_set--;
+        timerNotifier.value = timer_set;
+      } else {
+        timer.cancel();
+        timer_state = false;
+        setState(() {
+          certification = false;
+        });
+      }
     });
   }
 
@@ -334,12 +359,21 @@ class PasswordPage_1 extends State<Passwordpage_1> {
                       ),
                     ),
                     Container(
-                      // height: MediaQuery.of(context).size.height,
                       child: ElevatedButton(
                         onPressed: () {
-                          if (next_state_2) {
-                            next_state_3 = true;
-                          }
+                          setState(() {
+                            if (next_state_2) {
+                              next_state_3 = true;
+                              certification = true;
+                              if (timer_state) {
+                                timer_set = 180;
+                                timerNotifier.value = timer_set;
+                              } else {
+                                timer_state = true;
+                                Play_timer();
+                              }
+                            }
+                          });
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.zero,
@@ -354,7 +388,7 @@ class PasswordPage_1 extends State<Passwordpage_1> {
                           height: 48,
                           child: Center(
                             child: Text(
-                              '인증요청',
+                              certification ? '재요청' : '인증요청',
                               overflow: TextOverflow.fade,
                               maxLines: 1,
                               softWrap: false,
@@ -401,6 +435,32 @@ class PasswordPage_1 extends State<Passwordpage_1> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide.none),
+                      suffixIcon: Builder(
+                        builder: (context) {
+                          if (certification) {
+                            return ValueListenableBuilder<int>(
+                              valueListenable: timerNotifier,
+                              builder: (context, value, child) {
+                                String timerText =
+                                    '${value ~/ 60}:${(value % 60).toString().padLeft(2, '0')}';
+                                return Container(
+                                  padding: EdgeInsets.only(right: 16, top: 12),
+                                  child: Text(
+                                    timerText,
+                                    style: TextStyle(
+                                      color: Color(0xFFFF0000),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          } else {
+                            return SizedBox();
+                          }
+                        },
+                      ),
                     ),
                   ),
                 ),

@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import '../portfolio/sfaclog.dart';
+
+import '../controller/bottom_navigation.dart';
+import 'collection.dart';
+import 'community_screen.dart';
+import 'myPage.dart';
+import 'mainPage.dart';
+// import 'myPage.dart';
 
 const homeIcon = 'assets/icons/Home.svg';
 const communityIcon = 'assets/icons/Community.svg';
@@ -17,32 +26,15 @@ class BottomNavigationBarComponent extends StatefulWidget {
 
 class _BottomNavigationBarComponentState
     extends State<BottomNavigationBarComponent> {
-  int _selectedIndex = 0;
-
-  final _pageOptions = [
-    // TODO: 연결될 페이지 설정해주기
-    // Home(),
-    // Community(),
-    // Portfolio(),
-    // Collection(),
-    // Mypage(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  final NavigationController navigationController =
+      Get.put(NavigationController());
 
   @override
   Widget build(BuildContext context) {
-    return
-        // FIXME: _pageOptions 설정해주기
-        // body: _pageOptions.elementAt(_selectedIndex),
-        SizedBox(
+    return SizedBox(
       height: 64,
       child: BottomNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFFFFFFF),
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(
           fontSize: 10,
@@ -93,10 +85,30 @@ class _BottomNavigationBarComponentState
             label: '마이페이지',
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: navigationController.selectedIndex.value,
         selectedItemColor: const Color(0xff0059ff),
         unselectedItemColor: const Color(0xffb3b3b3),
-        onTap: _onItemTapped,
+        onTap: (index) {
+          navigationController.updateIndex(index);
+          switch (index) {
+            case 0:
+              Get.to(() => Home());
+              break;
+            case 1:
+              Get.to(() => Community());
+              break;
+            case 2:
+              Get.to(() => Sfaclog());
+              break;
+            case 3:
+              Get.to(() => Collection());
+              break;
+            case 4:
+              Get.to(() => MyPage());
+              break;
+            default:
+          }
+        },
       ),
     );
   }
