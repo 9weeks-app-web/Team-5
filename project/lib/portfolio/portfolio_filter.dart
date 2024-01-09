@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:team5/portfolio/dropdown.dart';
 
-class SfaclogFilter extends StatefulWidget {
+class PortfolioFilter extends StatefulWidget {
   @override
   _SfaclogFilter createState() => _SfaclogFilter();
 }
 
-class _SfaclogFilter extends State<SfaclogFilter> {
+class _SfaclogFilter extends State<PortfolioFilter> {
   String view_type = 'assets/images/Sfaclog/One_view.svg';
 
   @override

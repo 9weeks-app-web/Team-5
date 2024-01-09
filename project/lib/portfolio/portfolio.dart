@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:team5/portfolio/dropdown.dart';
-import 'package:team5/portfolio/respect.dart';
-import 'package:team5/portfolio/sfaclog_appbar.dart';
-import 'package:team5/portfolio/sfaclog_tapbar.dart';
-import 'package:team5/screen/bottom_nagivation_bar.dart';
-import 'package:team5/screen/shortpec.dart';
+import '/portfolio/respect.dart';
 
-class Sfaclog extends StatefulWidget {
+class Portfolio extends StatefulWidget {
   @override
-  _Sfaclog createState() => _Sfaclog();
+  _Portfolio createState() => _Portfolio();
 }
 
-class _Sfaclog extends State<Sfaclog> {
+class _Portfolio extends State<Portfolio> {
   String view_type = 'assets/images/Sfaclog/One_view.svg';
 
   @override

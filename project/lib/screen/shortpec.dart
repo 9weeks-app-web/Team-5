@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:team5/portfolio/sfaclog.dart';
+import 'package:team5/portfolio/portfolio.dart';
 import 'package:team5/screen/bottom_nagivation_bar_black.dart';
 import '../database/data_controller.dart';
 
@@ -355,7 +355,7 @@ class ShortPec extends State<Shortpec> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        Get.to(() => Sfaclog());
+                                        Get.to(() => Portfolio());
                                       },
                                       child: Container(
                                         width: 116,

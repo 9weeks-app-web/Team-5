@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:team5/loginscreen/LoginPage.dart';
+import 'package:team5/loginscreen/SplashPage.dart';
+import 'package:team5/portfolio/portfolio_custom_recommend.dart';
+import 'package:team5/screen/employment_dummy_data.dart';
+import 'package:team5/screen/user_controller.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -13,7 +18,7 @@ void main() async {
   Get.put(BookmarkController());
   runApp(
     GetMaterialApp(
-      home: Custom_recommend(),
+      // home: Custom_recommend(),
       debugShowCheckedModeBanner: false,
       home: SplashPage(),
       theme: ThemeData(

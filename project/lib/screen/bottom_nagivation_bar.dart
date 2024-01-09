@@ -1,10 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:team5/main.dart';
-import 'package:team5/portfolio/sfaclog.dart';
-import 'package:team5/screen/shortpec.dart';
+import '/main.dart';
+import '../portfolio/portfolio.dart';
+import '/screen/mainPage.dart';
+import '/screen/myPage.dart';
+import '/screen/shortpec.dart';
 
 import '../controller/bottom_navigation.dart';
 import 'collection.dart';
@@ -100,7 +101,7 @@ class _BottomNavigationBarComponentState
               Get.to(() => Community());
               break;
             case 2:
-              Get.to(() => Sfaclog());
+              Get.to(() => Portfolio());
               break;
             case 3:
               Get.to(() => Collection());
