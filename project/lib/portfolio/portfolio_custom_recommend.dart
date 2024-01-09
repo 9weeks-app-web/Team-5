@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:team5/Widget/slider.dart';
-import 'package:team5/portfolio/Portfolio_appbar.dart';
+import 'package:team5/portfolio/portfolio_appbar.dart';
 import 'package:team5/portfolio/portfolio_appbar.dart';
 import 'package:team5/portfolio/portfolio_tapbar.dart';
 import 'package:team5/utill/color.dart';
